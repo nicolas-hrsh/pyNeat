@@ -27,3 +27,12 @@ else:
 # if Falsy will not execute, 
 # if not Falsy is truly
 # then only it will execute
+
+
+# Match Case: better than If else.
+name = "Romeo"
+
+match name:
+    case "Alpha": print(f"Hello, {name}, your Id is 1331.")
+    case "Romeo": print(f"Hello, {name}, your Id is 1330.")
+    case "Delta": print(f"Hello, {name}, your Id is 1329.")
