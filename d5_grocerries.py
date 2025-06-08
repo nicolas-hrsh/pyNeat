@@ -1,7 +1,7 @@
 # Grocery List Manager
 # Create empty list groceries
-# Add 3 items
-# Remove the second item
+# Add z items
+# Remove the x item
 
 grocerries = []
 item_limit = int(input("How many items you want to order: "))
@@ -34,7 +34,7 @@ while True:
 
 
     elif x == 2:
-        print("Your order has been placed. Thanks! \n Your order: ")
+        print("Your order has been placed. Thanks!\nYour order: ")
         for item in grocerries:
             print(item)
         break
