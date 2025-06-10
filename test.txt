@@ -1,0 +1,52 @@
+# Create dictionary users with:
+# Keys: usernames
+# Values: tuples with (age, email)
+
+userDetails = {'Harshdeep' : (22, 'myemail@gmail.com'), 'Nicolas' : (29, 'myfemale@gmail.com')}
+
+# Add function to find users by email
+
+def searchUser( user: str):
+    try:
+        email = userDetails.get(user)[1]
+        print(email)
+    except TypeError:
+        print('No User Found!')
+
+userRequested = input('Please type in the username: ').strip().capitalize()
+searchUser(userRequested)
+
+# Write function to remove duplicates from list while preserving order:
+# ["apple", "banana", "apple"] to ["apple", "banana"]
+
+# ANS: Lets use sets, they preserve order and avoid data duplication
+
+fruits = ["apple", "banana", "apple"]
+filtered_fruits = set()
+for fruit in fruits:
+    filtered_fruits.add(fruit)
+
+for x in filtered_fruits:
+    print(x)
+
+alice_interests = {"hiking", "chess", "movies"}  
+bob_interests = {"chess", "gaming", "cooking"}  
+
+
+# Find: Shared interests
+
+shared_intrests = {alice_interests & bob_interests}
+
+# Find: Interests unique to Alice
+
+alice_only = {alice_interests - bob_interests}
+
+votes = ["A", "B", "A", "C", "B", "A"]  
+# Use dictionary to count votes → {"A":3, "B":2, "C":1}  
+
+
+voteCounter = {'A':0, 'B':0, 'C':0}
+
+for vote in votes:
+    voteCounter[vote] +=1
+    print(str(voteCounter[vote]) + f' for Candidate: {vote}')  # Describes who got the vote after each vote counted.
